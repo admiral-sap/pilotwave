@@ -429,6 +429,14 @@ void Game::makeMove(int i, int j, int sgn_1, int sgn_2, int k, int mode, int obs
 				}
 			}
 			dist_pos.norm();
+		}else{
+		val=board[player](i,j);
+		dist_neg(i,j)=1.;
+		for(int l=0;l<=2*k;l++){
+			if(i+(l*sgn_1)<BOARDSZ_1 && j+(l*sgn_2)<BOARDSZ_2 && i+(l*sgn_1)>=0 && j+(l*sgn_2)>=0)
+				dist_pos(i+(l*sgn_1),j+(l*sgn_2))=violent(k,l);
+		}
+		dist_pos.norm();	
 		}
 		if(observe==0){
 			move=(dist_pos-dist_neg)*val;
