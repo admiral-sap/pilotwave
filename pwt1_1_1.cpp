@@ -634,7 +634,7 @@ bool Game::isFinished(){
 void launchGame(){
 	bool valid;
 	int playernumber;
-	std::cout<<std::endl<<std::endl<<"Pilot Wave: The game | Version: 1.1.1"<<std::endl<<"an Aniline production"<<std::endl<<std::endl<<"Number of players:"; // Enter Version Number here (should be changed to a String Version Number on top)
+	std::cout<<std::endl<<std::endl<<"Pilot Wave: The game | Version: 1.1.2"<<std::endl<<"an Aniline production"<<std::endl<<std::endl<<"Number of players:"; // Enter Version Number here (should be changed to a String Version Number on top)
 	std::cin>>playernumber;
 	int* pos=new int[2*playernumber];
 		for(int i=0;i<playernumber;i++){
