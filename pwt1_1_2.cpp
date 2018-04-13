@@ -285,6 +285,9 @@ void Game::readMove(){
 	}
 	if(isFinished()){
 		std::cout<<"Player "<<PLAYERBRACKET_L[player]<<player<<PLAYERBRACKET_R[player]<<" won the game\n";
+		getchar();
+		std::cout<<"Press Enter to start new Round\n";
+		getchar();
 		launchGame();
 	}else {
 		player=(player+1)%playernumber;
